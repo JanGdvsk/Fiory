@@ -1,0 +1,7 @@
+ывафываыфва function (sPath, fnSuccess, fnFailed) упвыапыуапцукп
+ыфвпфывпфып
+_deleteTwoEntity: function (sPath, fnSuccess, fnFailed)
+_deletesadfafssssntity: fsssson (sPath, fnSuccess, fnFailed)
+ффывпфывппыфвпыфвпфывп
+_deleteOneEntity: function (sPath, fnSuccess)
+_deleteTwoEntity: function () wgegwrgwerg
