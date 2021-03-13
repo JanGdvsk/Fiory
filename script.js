@@ -1,19 +1,8 @@
-
-var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-let xhr = new XMLHttpRequest();
-xhr.open('GET', 'services.odata.org', false);
-
-// 3. Отсылаем запрос
-xhr.send();
-
-// 4. Этот код сработает после того, как мы получим ответ сервера
-xhr.onload = function() {
-  if (xhr.status != 200) { // анализируем HTTP-статус ответа, если статус не 200, то произошла ошибка
-    console.log(`Ошибка ${xhr.status}: ${xhr.statusText}`); // Например, 404: Not Found
-  } else { // если всё прошло гладко, выводим результат
-    console.log(`Готово, получили ${xhr.response} байт`); // response -- это ответ сервера
-  }
-};
-
-
-
+// В поле Ответ укажите URL HTTP-запроса, удовлетворяющего условию задания.
+// Задание: Используя документацию к oData https://www.odata.org/documentation/odata-version-2-0/,
+// составьте запрос к сервису https://services.odata.org/V2/Northwind/Northwind.svc/,
+// который выводит в формате json всех клиентов (Customer) из Берлина и их заказы (Orders).
+// Выводить нужно только поля CustomerID, CompanyName и City для клиента и OrderId, OrderDate для заказа.
+const OData = require('qeti/simple-podata');
+const Query = 'https://services.odata.org/V2/Northwind/Northwind.svc/api1/sampledb/collections/CustomerID/CompanyName/City(Berlin)';
+OData.read(Query, success, error);
